@@ -1,0 +1,61 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <!-- Change the page title here -->
+      <h1>
+        What you need to do now?
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <div class="nhsuk-care-card nhsuk-care-card--urgent">
+        <div class="nhsuk-care-card__heading-container">
+          <h3 class="nhsuk-care-card__heading"><span role="text"><span class="nhsuk-u-visually-hidden">Urgent advice: </span>something</span></h3>
+          <span class="nhsuk-care-card__arrow" aria-hidden="true"></span>
+        </div>
+        <div class="nhsuk-care-card__content">
+          <p>Based on what you’ve told us and where you’ve been, you’re at low risk of catching coronavirus (COVID-19).</p>
+          <p>You don’t need to speak to anybody right now as you:</p>
+          <ul>
+            <li>have not been to an area with a serious outbreak</li>
+            <li>are not showing any symptoms</li>
+            <li>have not been in contact with a confirmed case</li>
+            <li>blah blah blah</li>
+          </ul>
+        </div>
+      </div>
+      <br>
+      <p>some other stuff</p>
+      <form action="symptoms-radio" method="post">
+          <button class="nhsuk-button" type="submit">
+            Save and continue
+          </button>
+      </form>
+      <!-- End of content -->
+    </div>
+  </div>
+{% endblock %}
