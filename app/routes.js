@@ -13,7 +13,7 @@ router.post('/updates-text', function(req,res){
         res.redirect('check-answers')
     }
     else {
-        res.redirect('#')
+        res.redirect('check-answers')
     }
 
 })
