@@ -45,9 +45,26 @@
             <label class="nhsuk-label" for="example">
                 Select the date your symptoms started.
             </label>
-            <input class="nhsuk-input nhsuk-input--width-5" id="input-width-5" name="test-width-5" type="text">
-            <p>[accessible datepicker]</p>
+         
+                  
+            
+              <div class="field ">
+              <label for="date">
+   
+              </label>
+              <input class="nhsuk-input nhsuk-input--width-10" type="date" id="date" name="date" value="" placeholder="DD/MM/YYYY">
+            </div>
+            
+            
+    
        </div>
+       <script src="/public/js/vendor.min.0c8d5051.js"></script>
+       <script src="/public/js/app.min.81f7895f.js"></script>
+       <script>
+          if(typeof DatePicker !== 'undefined') {
+            new DatePicker($('#date'));
+          }
+        </script>
       </fieldset>
       <br>
       <form action="which-conditions" method="post">
