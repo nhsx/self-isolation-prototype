@@ -24,14 +24,29 @@
 {% block content %}
 
   <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-      <div class="done-panel" style="background-color: #005EB8; color: white; padding: 20px;margin: 30px 0;">
-          <h1 class="heading-large">Done</h1>
-       </div>
-       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse pulvinar ac ex dapibus hendrerit.</p>
- 
-      <br>
-      <!-- End of content -->
+    <div class="column-two-thirds">
+
+      <div class="done-panel" style="background-color: #005EB8; text-align: center; color: white; padding: 20px; margin: 30px 0;">
+        <h1 class="heading-large"><span id="done-tick"> </span>Done</h1>
+        <div id="oneoff_done">
+          <h2 class="heading-medium">You did it</h2>
+        </div>
+      </div>
+
+      <h3 class="heading-medium">something</h3>
+
+      <p>text</p>
+      <div class="panel panel-border-wide">
+    </div>
+
+      <p>text</p>
+
+      <form action="index" method="post">
+          <button class="nhsuk-button" type="submit">
+              Back to start
+          </button>
+      </form>
+
     </div>
   </div>
 {% endblock %}
