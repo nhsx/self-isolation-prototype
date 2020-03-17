@@ -2,7 +2,7 @@
 {% extends 'layout.html' %}
 
 {% block pageTitle %}
-Page not found – How is coronvirus affecting you – NHS.UK
+Timed out, you will need to start again – How is coronvirus affecting you – NHS.UK
 {% endblock %}
 
 {% block beforeContent %}
@@ -26,27 +26,19 @@ Page not found – How is coronvirus affecting you – NHS.UK
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-        <h1 class="nhsuk-heading-xl">You will need to start again</h1>
+        <h1 class="nhsuk-heading-xl">You have been away from your device for 30 minutes</h1>
 
         <p class="nhsuk-body">
-          You will be able to use the service from (planned date of shutter lift example, 9am on Monday 19 November 2018). 
+          For security reasons, we can't save what you have done so far. You will need to start again. 
         </p>
         <p class="nhsuk-body">
-          Contact (who?) if you have any questions.
+          
         </p>
-        <p class="nhsuk-body">
-          Telephone:<br>
-          <strong class="nhsuk-!-font-weight-bold">0808 157 3900</strong>
-        </p>
-        <p class="nhsuk-body">
-          Textphone:<br>
-          <strong class="nhsuk-!-font-weight-bold">0808 157 3909</strong>
-        </p>
-        <p class="nhsuk-body">
-          Opening times:<br>
-          <strong class="nhsuk-!-font-weight-bold">Monday to Friday: 8am to 8pm</strong>
-        </p>
-
+      {{ button({
+        "text": "Start again",
+        "href": "#"
+      }) }}
+      
     </div>
   </div>
 
