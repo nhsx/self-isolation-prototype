@@ -34,50 +34,60 @@
       <!-- Add your content here -->
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
 
-      <fieldset class="nhsuk-fieldset">
-        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-          <h1>
-            sfsf
-          </h1>
-        </legend>
-      
-        <div class="nhsuk-form-group">
-      
-          <div class="nhsuk-radios">
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
-              <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
-                Yes
-              </label>
-            </div>
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no">
-              <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
-                No
-              </label>
-            </div>
-            <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
-                  Yes
-                </label>
-            </div>
-            <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
-                  Yes
+      <div class="nhsuk-form-group">
+
+          <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1>
+                  Why are you staying at home?
+              </h1>
+            </legend>
+        
+            <span class="nhsuk-hint" id="example-hint">
+                Please select all that apply
+            </span>
+        
+            <div class="nhsuk-checkboxes">
+        
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                    I’ve been diagnosed positive with coronavirus (COVID-19) by my GP or a healthcare professional
                 </label>
               </div>
-            <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
-                  Yes
+        
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                    I have coronavirus symptoms
                 </label>
+              </div>
+        
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    I’ve used the 111 coronavirus service (either online or by calling 111)
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                      I don’t have any coronavirus symptoms myself but I am staying at home by choice
+                  </label>
+                </div>
+
+                <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        A family member or person I live with has coronavirus
+                    </label>
+                  </div>
+        
             </div>
-          </div>
+          </fieldset>
+        
         </div>
-      
-      </fieldset>
       <br>
       <form action="symptoms-start" method="post">
           <button class="nhsuk-button" type="submit">
