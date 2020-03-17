@@ -4,16 +4,18 @@ const router = express.Router();
 
 // Add your routes here - above the module.exports line
 
-module.exports = router;
-
-
-router.post('self-isolate', function(req,res){
-    var sisolate = req.session.data[sisolate]
-    if (sisolate == "yes"){
-        res.redirect('other-conditions')
+router.post('/updates-text', function(req,res){
+    var contacted = req.session.data['how-contacted']
+    if (contacted == "email"){
+        res.redirect('telephone-number')
+    }
+    if (contacted == "phone"){
+        res.redirect('check-answers')
     }
     else {
-        res.redirect('check-answers-no')
+        res.redirect('#')
     }
 
 })
+
+module.exports = router;
