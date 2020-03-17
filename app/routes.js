@@ -19,7 +19,7 @@ router.post('/updates-text', function(req,res){
 })
 
 router.post('/live-alone', function(req,res){
-    var contacted = req.session.data['live-alone123']
+    var contacted = req.session.data['living-alone']
     if (contacted == "yes"){
         res.redirect('live-number')
     }
