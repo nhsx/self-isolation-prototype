@@ -18,4 +18,18 @@ router.post('/updates-text', function(req,res){
 
 })
 
+/* router.post('/self-isolate', function(req,res){
+    var contacted = req.session.data['self-isolate-1']
+    if (contacted == "self-isolate-yes"){
+        res.redirect('reason-isolating')
+    }
+    if (contacted == "self-isolate-no"){
+        res.redirect('why-not-isolate')
+    }
+    else {
+        res.redirect('#')
+    }
+
+})*/
+
 module.exports = router;

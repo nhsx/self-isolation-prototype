@@ -33,7 +33,7 @@
     <div class="nhsuk-grid-column-two-thirds">
       <!-- Add your content here -->
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
-
+   
       <fieldset class="nhsuk-fieldset">
         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
           <h1>
@@ -45,14 +45,14 @@
       
           <div class="nhsuk-radios">
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
-              <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+              <input class="nhsuk-radios__input" id="self-isolate-conditional" name="self-isolate1" type="radio" value="self-isolate-yes" data-aria-controls="conditional-self-isolate-conditional-1">
+              <label class="nhsuk-label nhsuk-radios__label" for="self-isolate-conditional">
                 Yes
               </label>
             </div>
             <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no">
-              <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+              <input class="nhsuk-radios__input" id="self-isolate-conditional-2" name="self-isolate1" type="radio" value="self-isolate-no" data-aria-controls="conditional-self-isolate-conditional-2">
+              <label class="nhsuk-label nhsuk-radios__label" for="self-isolate-conditional-2">
                 No
               </label>
             </div>
@@ -61,11 +61,13 @@
       
       </fieldset>
       <br>
+      <br>
       <form action="reason-isolating" method="post">
-          <button class="nhsuk-button" type="submit">
+        <button class="nhsuk-button" type="submit">
             Next
-          </button>
-      </form>
+        </button>
+    </form>
+
       <!-- End of content -->
     </div>
   </div>
