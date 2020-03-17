@@ -38,9 +38,11 @@
       <fieldset class="nhsuk-fieldset">
         <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
           <h1>
-              What's your temperature? [placeholder]
+              Do you have a high temperature - you feel hot to touch on your chest or back?
           </h1>
         </legend>
+        <span class="nhsuk-hint" id="example-hint">
+          </span>
       
         <div class="nhsuk-form-group">
       
@@ -48,19 +50,19 @@
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="above">
               <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
-                Above normal (44 - 38 °C)
+                Yes
               </label>
             </div>
             <div class="nhsuk-radios__item">
               <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="normal">
               <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
-                Normal (36.5 – 37.5 °C)
+                No
               </label>
             </div>
             <div class="nhsuk-radios__item">
                 <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio" value="under">
                 <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
-                  Under normal (36 – 24 °C)
+                  I don't know
                 </label>
               </div>
           </div>
@@ -68,7 +70,7 @@
       
       </fieldset>
       <br>
-      <form action="age" method="post">
+      <form action="dob" method="post">
           <button class="nhsuk-button" type="submit">
             Next
           </button>
