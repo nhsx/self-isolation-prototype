@@ -105,17 +105,7 @@ display: none;
               Continue
           </button>
       </form>
-      <!-- End of content -->
-      <script>
-        $("#radioUntilPeriod").click(function() {
-	$("#until-period").removeClass("hidden");
-	$("#until-period").prop( "disabled", false ); // enable validation
-});
-$("#radio3months, #radioUnlimited").click(function() {
-	$("#until-period").addClass("hidden");
-	$("#until-period").prop("disabled", true); // disable validation
-});
-        </script>
+
     </div>
   </div>
 {% endblock %}
