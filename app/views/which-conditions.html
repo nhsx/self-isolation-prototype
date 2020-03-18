@@ -22,95 +22,82 @@
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-
+<style>
+  .hidden {
+display: none;
+}
+  </style>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
       <div class="nhsuk-form-group">
 
-          <fieldset class="nhsuk-fieldset">
-              <div class="nhsuk-form-group">
-
-                <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
-                  <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-                    <h1>
-                        Do you have any of these health conditions?  </h1>
-                  </legend>
-              
-                  <span class="nhsuk-hint" id="example-hint">
-                    Select all options that are relevant to you.
-                  </span>
-              
-                  <div class="nhsuk-checkboxes">
-              
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
-                        Asthma
-                      </label>
-                    </div>
-              
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
-                        Diabetes
-                      </label>
-                    </div>
-              
-                    <div class="nhsuk-checkboxes__item">
+          <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                <h1>
+                    Do you have any of these health conditions?  </h1>
+              </legend>
+              <span class="nhsuk-hint" id="example-hint">
+                Select all options that are relevant to you.
+              </span>
+              <div class="nhsuk-checkboxes">
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                    Asthma
+                  </label>
+                </div>
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                    Diabetes
+                  </label>
+                </div>
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    Heart disorder
+                  </label>
+                </div>
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    Kidney disorder
+                  </label>
+                </div>
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    An immunocompromising condition
+                  </label>
+                </div>
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    Chronic lung disorder besides asthma e.g. COPD, emphysema, or other disorders that affect your breathing
+                  </label>
+                </div>
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    No – I don't have any of these health conditions
+                  </label>
+                </div>
+                <div class="nhsuk-checkboxes__item nhsuk-radios--conditional" data-module="radios" data-target="conditional-how-contacted-conditional">
                       <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
                       <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
-                        Heart disorder      
+                        I have another health condition that is not listed
                       </label>
-                    </div>
-                    
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
-                        Kidney disorder  
+                </div>
+                <div class="nhsuk-checkboxes__conditional hidden" id="conditional-how-contacted-conditional">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label" for="contact-by-email">
+                          Other health condition
                       </label>
+                      <input class="nhsuk-input nhsuk-u-width-one-third" id="contact-by-email" name="contact-by-email" type="number" spellcheck="false"></textarea>
                     </div>
-
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
-                        An immunocompromising condition     
-                      </label>
-                    </div>
-
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
-                        Chronic lung disorder besides asthma e.g. COPD, emphysema, or other disorders that affect your breathing
-                      </label>
-                    </div>
-                    
-                    <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
-                        No – I don’t have any of these health conditions
-                      </label>
-                    </div>
-                    <div class="nhsuk-checkboxes__item nhsuk-radios--conditional" data-module="radios">   
-                          <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
-                          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
-                            I have another health condition that is not listed
-                          </label>          
-                    </div>
-  
-                    <div class="nhsuk-radios__conditional" id="conditional-how-contacted-conditional">
-                        <div class="nhsuk-form-group">
-                          <label class="nhsuk-label" for="contact-by-email">
-                              Other health condition
-                          </label>
-                          <input class="nhsuk-input nhsuk-u-width-one-third" id="contact-by-email" name="contact-by-email" type="number" spellcheck="false"></textarea>
-                        </div>
-                      </div>
                   </div>
-                </fieldset>
-              
               </div>
             </fieldset>
-
         </div>
       <br>
       <form action="temperature" method="post">
@@ -119,6 +106,16 @@
           </button>
       </form>
       <!-- End of content -->
+      <script>
+        $("#radioUntilPeriod").click(function() {
+	$("#until-period").removeClass("hidden");
+	$("#until-period").prop( "disabled", false ); // enable validation
+});
+$("#radio3months, #radioUnlimited").click(function() {
+	$("#until-period").addClass("hidden");
+	$("#until-period").prop("disabled", true); // disable validation
+});
+        </script>
     </div>
   </div>
 {% endblock %}
