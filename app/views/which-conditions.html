@@ -90,11 +90,20 @@
                         No – I don’t have any of these health conditions
                       </label>
                     </div>
-                    <div class="nhsuk-checkboxes__item">
-                        <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
-                        <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
-                          I have another health condition that is not listed
-                        </label>
+                    <div class="nhsuk-checkboxes__item nhsuk-radios--conditional" data-module="radios">   
+                          <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                          <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                            I have another health condition that is not listed
+                          </label>          
+                    </div>
+  
+                    <div class="nhsuk-radios__conditional" id="conditional-how-contacted-conditional">
+                        <div class="nhsuk-form-group">
+                          <label class="nhsuk-label" for="contact-by-email">
+                              Other health condition
+                          </label>
+                          <input class="nhsuk-input nhsuk-u-width-one-third" id="contact-by-email" name="contact-by-email" type="number" spellcheck="false"></textarea>
+                        </div>
                       </div>
                   </div>
                 </fieldset>
