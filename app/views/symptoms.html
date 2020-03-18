@@ -22,51 +22,110 @@
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
+<style>
+.js-enabled .nhsuk-checkboxes__conditional--hidden {
+  display: block;
+}
 
+.js-enabled .govuk-checkboxes__conditional--hidden {
+  display: none;
+}
+</style>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
       <!-- Add your content here -->
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+      <div class="nhsuk-form-group">
 
-      <fieldset class="nhsuk-fieldset">
-        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-          <h1>
-              Do you have a high temperature?
-          </h1>
-        </legend>
-        <div class="nhsuk-inset-text">
-            <span class="nhsuk-u-visually-hidden">Information: </span>
-            <p>This question is for research purposes. If you have a high temperature or you’re worried about an emergency, visit the <a href="https://111.nhs.uk/covid-19/" title="External website">111 coronavirus online service</a> to get help.</p>
-      </div>
-      
-        <div class="nhsuk-form-group">
-      
-          <div class="nhsuk-radios">
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="above">
-              <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
-                Yes
-              </label>
-            </div>
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="normal">
-              <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
-                No
-              </label>
-            </div>
-            <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio" value="under">
-                <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
-                  I don't know
+          <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1>
+                  Do you currently have any of these symptoms?
+              </h1>
+            </legend>
+        
+            <span class="nhsuk-hint" id="example-hint">
+                 Select all that apply
+            </span>
+        
+            <div class="nhsuk-checkboxes" data-module="checkboxes">
+              
+              <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                    High temperature (fever)
+                  </label>
+                </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-2" name="example" type="checkbox" value="phone">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-2">
+                  Sore throat
                 </label>
               </div>
-          </div>
+        
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    New continuous cough
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    Shortness of breath
+                  </label>
+                </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    Muscle or joint pain
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    Loss of smell or taste
+                </label>
+              </div>
+
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    Feeling tired or exhausted
+                </label>
+              </div>
+
+
+                <div class="nhsuk-checkboxes__item">
+                    <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message" data-aria-controls="health-condition">
+                    <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                        No - I do not have any of these symptoms
+                    </label>
+                  </div>
+                  <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="health-condition">
+                    <div class="nhsuk-form-group">
+                      <label class="nhsuk-label" for="contact-by-email">
+                          Other symptoms
+                      </label>
+                      <input class="nhsuk-input nhsuk-u-width-one-third" id="contact-by-email" name="contact-by-email" type="number" spellcheck="false"></input>
+                    </div>
+                  </div>
+
+
+
+        
+            </div>
+          </fieldset>
+        
         </div>
-      
-      </fieldset>
+     
       <br>
-      <form action="dob" method="post">
+      <form action="symptoms-start" method="post">
           <button class="nhsuk-button" type="submit">
               Continue
           </button>
