@@ -23,14 +23,18 @@
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 <style>
-  .hidden {
-display: none;
-}
+  .js-enabled .nhsuk-checkboxes__conditional--hidden {
+    display: block;
+  }
+
+  .js-enabled .govuk-checkboxes__conditional--hidden {
+    display: none;
+  }
   </style>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <div class="nhsuk-form-group">
-
+      <form action="/temperature" method="post">
+        <div class="nhsuk-form-group">
           <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
               <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
                 <h1>
@@ -39,7 +43,7 @@ display: none;
               <span class="nhsuk-hint" id="example-hint">
                 Select all options that are relevant to you.
               </span>
-              <div class="nhsuk-checkboxes">
+              <div class="nhsuk-checkboxes" data-module="checkboxes">
                 <div class="nhsuk-checkboxes__item">
                   <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
                   <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
@@ -82,30 +86,28 @@ display: none;
                     No – I don't have any of these health conditions
                   </label>
                 </div>
-                <div class="nhsuk-checkboxes__item nhsuk-radios--conditional" data-module="radios" data-target="conditional-how-contacted-conditional">
-                      <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
-                        I have another health condition that is not listed
-                      </label>
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message" data-aria-controls="health-condition">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    I have another health condition that is not listed
+                  </label>
                 </div>
-                <div class="nhsuk-checkboxes__conditional hidden" id="conditional-how-contacted-conditional">
-                    <div class="nhsuk-form-group">
-                      <label class="nhsuk-label" for="contact-by-email">
-                          Other health condition
-                      </label>
-                      <input class="nhsuk-input nhsuk-u-width-one-third" id="contact-by-email" name="contact-by-email" type="number" spellcheck="false"></textarea>
-                    </div>
+                <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="health-condition">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="contact-by-email">
+                        Other health condition
+                    </label>
+                    <input class="nhsuk-input nhsuk-u-width-one-third" id="contact-by-email" name="contact-by-email" type="number" spellcheck="false"></input>
                   </div>
+                </div>
               </div>
             </fieldset>
-        </div>
-      <br>
-      <form action="temperature" method="post">
-          <button class="nhsuk-button" type="submit">
-              Continue
-          </button>
+          </div>
+        <br>
+        <button class="nhsuk-button" type="submit">
+            Continue
+        </button>
       </form>
-
     </div>
   </div>
 {% endblock %}
