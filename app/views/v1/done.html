@@ -1,0 +1,53 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="column-two-thirds">
+
+      <div class="nhsuk-grid-column-two-thirds">
+      <div class="done-panel" style="background-color: #005EB8; text-align: center; color: white; padding: 20px; margin: 30px 0;">
+        <h1 class="heading-large"><span id="done-tick"> </span>Done 1</h1>
+        <div id="oneoff_done">
+          <h2 class="heading-medium">Thank you for sharing this info!</h2>
+        </div>
+      </div>
+
+      <h3 class="heading-medium">If your circumstances change</h3>
+
+      <p>call 111</p>
+      <div class="panel panel-border-wide">
+    </div>
+
+      <p>in case of emergency call 999</p>
+
+      <form action="index" method="post">
+          <button class="nhsuk-button" type="submit">
+              Back to start
+          </button>
+      </form>
+
+  </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,74 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+<div class="nhsuk-back-link">
+    <a class="nhsuk-back-link__link" href="#">
+      <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+      </svg>
+      Go back</a>
+</div>  
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+   
+      <fieldset class="nhsuk-fieldset">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <h1>
+            Are you using this service for yourself or on behalf of someone else?
+          </h1>
+        </legend>
+      
+        <div class="nhsuk-form-group">
+      
+          <div class="nhsuk-radios">
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="self-isolate-conditional" name="self-isolate1" type="radio" value="self-isolate-yes" data-aria-controls="conditional-self-isolate-conditional-1">
+              <label class="nhsuk-label nhsuk-radios__label" for="self-isolate-conditional">
+                Myself
+              </label>
+            </div>
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="self-isolate-conditional-2" name="self-isolate1" type="radio" value="self-isolate-no" data-aria-controls="conditional-self-isolate-conditional-2">
+              <label class="nhsuk-label nhsuk-radios__label" for="self-isolate-conditional-2">
+                On behalf of someone else
+              </label>
+            </div>
+          </div>
+        </div>
+      
+      </fieldset>
+      <br>
+      <br>
+      <form action="self-isolate" method="post">
+        <button class="nhsuk-button" type="submit">
+            Next
+        </button>
+    </form>
+
+      <!-- End of content -->
+    </div>
+  </div>
+{% endblock %}
