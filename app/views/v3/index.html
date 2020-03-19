@@ -1,0 +1,65 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+      <h1>
+        Tell us if you’re staying at home because of coronavirus
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <p class="nhsuk-lede-text">This is a research tool to help us record how many people are staying at home due to coronavirus (COVID-19).</p>
+
+
+       <p>By answering some quick questions you can help the NHS to understand:      </p>
+      <ul>
+        <li>how people are being affected by coronavirus</li>
+        <li>the number of people recovering from coronavirus</li>
+        <li>which areas of the country need resources most</li>
+      </ul>    
+      <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>We will not share the answers you give us beyond the Department of Health and Social Care.</p>
+      </div>
+      <p>If you tell us your mobile number we'll send you daily advice about how to look after the mental and physical health of yourself and others while you're at home.        </p>
+    
+        <p>If you complete this survey for someone else, you’ll need to tell us their details.</p>          
+        <br>
+
+        <form action="you-or-someone-else" method="post">
+            <button class="nhsuk-button" type="submit">
+              Start now
+            </button>
+        </form>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

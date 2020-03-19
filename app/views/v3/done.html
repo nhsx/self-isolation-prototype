@@ -1,0 +1,72 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="column-two-thirds">
+
+      <div class="nhsuk-grid-column-two-thirds">
+      <div class="done-panel" style="background-color: #005EB8; text-align: center; color: white; padding: 20px; margin: 30px 0;">
+        <h1 class="heading-large"><span id="done-tick"> </span>Thank you for sharing this information.</h1>
+        <div id="oneoff_done">
+          <h2 class="heading-medium">You'll get your first text update from us soon.</h2>
+        </div>
+      </div>
+      <h2 class="nhsuk-heading-m">What you need to do next</h2>
+      <p>Stay up-to-date with the latest <a href="https://www.gov.uk/government/publications/covid-19-guidance-on-social-distancing-and-for-vulnerable-people/guidance-on-social-distancing-for-everyone-in-the-uk-and-protecting-older-people-and-vulnerable-adults">Government advice</a>.</p>
+
+      <p>Get the latest <a href="https://www.nhs.uk/conditions/coronavirus-covid-19/" target="_blank" rel="noopener noreferrer">NHS information on coronavirus</a>, including advice on staying at home.</p>
+     
+      <div class="nhsuk-inset-text">
+          <span class="nhsuk-u-visually-hidden">Information: </span>
+          <h3>If you get symptoms of coronavirus, or if your symptoms get worse, get advice from:</h3>
+    <ul>
+        <li>
+            England:
+            <a href="https://111.nhs.uk/covid-19" target="_blank" rel="noopener noreferrer">
+                NHS 111 online coronavirus service
+            </a>
+        </li>
+        <li>
+            Scotland:
+            <a href="https://www.nhsinform.scot/illnesses-and-conditions/infections-and-poisoning/coronavirus-covid-19" target="_blank" rel="noopener noreferrer">
+                NHS inform
+            </a>
+        </li>
+        <li>
+            Wales:
+            <a href="https://www.nhsdirect.wales.nhs.uk/" target="_blank" rel="noopener noreferrer">
+                NHS Direct Wales
+            </a>
+        </li>
+        <li>
+            Northern Ireland: Call 111
+        </li>
+    </ul>       </div>
+
+
+    
+  </div>
+  </div>
+{% endblock %}

@@ -33,7 +33,7 @@
   </style>
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <form action="/dob" method="post">
+      <form action="/temperature" method="post">
         <div class="nhsuk-form-group">
           <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
               <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
@@ -44,7 +44,7 @@
                 Select all options that are relevant to you.
               </span>
               <div class="nhsuk-checkboxes" data-module="checkboxes">
-                <div class="nhsuk-checkboxes__item">
+                <!-- <div class="nhsuk-checkboxes__item">
                   <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
                   <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
                     Asthma
@@ -85,6 +85,20 @@
                   <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
                     No – I don't have any of these health conditions
                   </label>
+                </div> -->
+                <div class="nhsuk-checkboxes__item">
+                  <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message" data-aria-controls="health-condition">
+                  <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
+                    I have another health condition that is not listed
+                  </label>
+                </div>
+                <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden" id="health-condition">
+                  <div class="nhsuk-form-group">
+                    <label class="nhsuk-label" for="contact-by-email">
+                        Other health condition
+                    </label>
+                    <input class="nhsuk-input nhsuk-u-width-one-third" id="contact-by-email" name="contact-by-email" type="number" spellcheck="false"></input>
+                  </div>
                 </div>
               </div>
             </fieldset>
