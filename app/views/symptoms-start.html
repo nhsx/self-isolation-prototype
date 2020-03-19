@@ -26,7 +26,7 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
 
-        <div class="nhsuk-form-group">
+       <!-- <div class="nhsuk-form-group">
             <fieldset class="nhsuk-fieldset" aria-describedby="example-hint" role="group">
               <legend class="nhsuk-fieldset__legend nhsuk-label--l">
                 <h1>
@@ -72,43 +72,72 @@
                       </div>
                     </div>
             </fieldset>
-          </div>
-      <!-- Add your content here -->
-      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+          </div> -->
 
-      <!--<fieldset class="nhsuk-fieldset">
-        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-          <h1>
-              When did your symptoms start?
-          </h1>
-        </legend>
 
-        <span class="nhsuk-hint" id="example-hint">
-            If you are not sure which day your symptoms started, enter an approximate day.
-          </span>
-        <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="example">
-                Select the date your symptoms started.
-            </label>
-       
-         
-                  
+
+          <fieldset class="nhsuk-fieldset">
+              <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                <h1>
+                    When did your symptoms first start?
+                </h1>
+              </legend>
             
-              <div class="field ">
-              <label for="date">
-   
-              </label>
-              <input class="nhsuk-input nhsuk-input--width-10" type="date" id="date" name="date" value="" placeholder="DD/MM/YYYY">
-            </div>
-       </div>
-       <script src="/public/js/vendor.min.0c8d5051.js"></script>
-       <script src="/public/js/app.min.81f7895f.js"></script>
-       <script>
-          if(typeof DatePicker !== 'undefined') {
-            new DatePicker($('#date'));
-          }
-        </script>
-      </fieldset> -->
+              <span class="nhsuk-hint nhsuk-u-margin-bottom-2">
+                  If you are not sure which day your symptoms first started, select an approximate date.
+              </span>
+            
+            
+            
+              <div class="nhsuk-form-group">
+            
+                <div class="nhsuk-radios">
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="example-hints-1" name="example-hints" type="radio" value="yes">
+                    <label class="nhsuk-label nhsuk-radios__label" for="example-hints-1">
+                        Today
+                    </label>
+                  </div>
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="example-hints-2" name="example-hints" type="radio" value="no">
+                    <label class="nhsuk-label nhsuk-radios__label" for="example-hints-2">
+                        Yesterday
+                    </label>
+                  </div>
+                  <div class="nhsuk-radios__item">
+                    <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio" value="not sure">
+                    <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+                        Within the last week
+                    </label>
+                  </div>
+                  <div class="nhsuk-radios__item">
+                      <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio" value="not sure">
+                      <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+                          2 weeks ago
+                      </label>
+                    </div>
+                    <div class="nhsuk-radios__item">
+                        <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio" value="not sure">
+                        <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+                            More than 2 weeks ago
+                        </label>
+                      </div>
+                      <div class="nhsuk-radios__item">
+                          <input class="nhsuk-radios__input" id="example-hints-3" name="example-hints" type="radio" value="not sure">
+                          <label class="nhsuk-label nhsuk-radios__label" for="example-hints-3">
+                              More than a month ago
+
+                          </label>
+                        </div>
+
+
+
+                    
+                </div>
+              </div>
+            
+            </fieldset>
+            
       <br>
       <form action="which-conditions" method="post">
           <button class="nhsuk-button" type="submit">
