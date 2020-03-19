@@ -1,0 +1,66 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="column-two-thirds">
+
+      <div class="nhsuk-grid-column-two-thirds">
+      <div class="done-panel" style="background-color: #005EB8; text-align: center; color: white; padding: 20px; margin: 30px 0;">
+        <h1 class="heading-large"><span id="done-tick"> </span>Done</h1>
+        <div id="oneoff_done">
+          <h2 class="heading-medium">Thank you for sharing this information with the NHS.</h2>
+        </div>
+      </div>
+      <h3 class="heading-medium">We’ll send you daily updates about:</h3>
+      <ul> 
+          <li>how to protect yourself and others through each stage of your journey</li>
+          <li>what to do if you live with others who are also staying at home because of coronavirus</li>
+          <li>how to look after your mental health and wellbeing</li>
+      </ul>
+
+      <h4 class="nhsuk-heading-xs">Use the NHS 111 online coronavirus service if:</h3>
+      
+     <ul> 
+      <li>you feel you cannot cope with your symptoms at home</li>
+          <li>your condition gets worse</li>
+          <li>your symptoms do not get better after 7 days</li>
+    </ul>
+
+    <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>Call 111 if you cannot get help online.</p>
+      </div>
+      
+
+     
+      <form action="index" method="post">
+          <button class="nhsuk-button" type="submit">
+              Back to start
+          </button>
+      </form>
+
+  </div>
+  </div>
+{% endblock %}

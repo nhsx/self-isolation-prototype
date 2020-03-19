@@ -1,0 +1,272 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  NHS.UK prototype kit
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="column-two-thirds">
+
+        <main class="nhsuk-main-wrapper " id="maincontent" role="main">
+            
+
+
+
+
+
+
+
+
+            <div class="nhsuk-grid-row">
+              <div class="nhsuk-grid-column-two-thirds">
+          
+                <form action="/submit-your-edec/sections/practice-procedures/communicating-with-patients/return-user/new-communicating-details" method="get">
+          
+          
+                  
+           
+          
+          
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+              
+            
+          
+            
+              
+            
+          
+            
+          
+            
+          <div class="nhsuk-form-group">
+          
+            <fieldset class="nhsuk-fieldset" aria-describedby="nationality-hint">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                </h1><h1 class="nhsuk-fieldset__heading"><span class="nhsuk-caption-l nhsuk-caption--top">Communicating with patients
+                        </span>When undertaking call/recall activities as part of delivering vaccination programmes please specify when required how the practice’s eligible population are contacted?</h1>
+              
+            </legend>
+          
+            <span class="nhsuk-hint" id="nationality-hint">
+              Select all that apply
+            </span>
+          
+          
+            <div class="nhsuk-checkboxes" data-module="checkboxes">
+              
+              
+              
+              
+              
+              
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="nationality-1" name="callRecall" type="checkbox" value="posterPatient">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-1">
+                  Poster in waiting room
+                </label>
+              </div>
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="nationality-2" name="callRecall" type="checkbox" value="notificationWebsite">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-2">
+                  Notification on practice website
+                </label>
+              </div>
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="nationality-3" name="callRecall" type="checkbox" value="letterPatient">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-3">
+                  Letter to patient
+                </label>
+              </div>
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="nationality-4" name="callRecall" type="checkbox" value="textMessage">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-4">
+                  Text message to patient
+                </label>
+              </div>
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="nationality-5" name="callRecall" type="checkbox" value="phoneCall">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-5">
+                  Phone call to patient
+                </label>
+              </div>
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="nationality-6" name="callRecall" type="checkbox" value="consultation">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-6">
+                  During consultation or appointment
+                </label>
+              </div>
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="nationality-7" name="callRecall" type="checkbox" value="other" checked="" aria-controls="conditional-nationality-7" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-7">
+                  Other electronic technical solution
+                </label>
+              </div>
+              
+                <div class="nhsuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-nationality-7">
+                  
+          
+          
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="electronicTechSolutionInput">
+              What other electronic technical solutions are used to contact the practice’s eligible population?
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-30" id="electronicTechSolutionInput" name="electronicTechSolution" type="text">
+          </div>
+          
+          
+                </div>
+              
+              
+              
+              
+              
+              
+              
+              
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="nationality-8" name="callRecall" type="checkbox" value="othernonElectronic" aria-controls="conditional-nationality-8" aria-expanded="false">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-8">
+                  Other non-electronic technical solution
+                </label>
+              </div>
+              
+                <div class="nhsuk-checkboxes__conditional nhsuk-checkboxes__conditional--hidden govuk-checkboxes__conditional--hidden" id="conditional-nationality-8">
+                  
+          
+          
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="nonElectronicTechSolutionInput">
+              What other non-electronic technical solutions are used to contact the practice’s eligible population?
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-30" id="nonElectronicTechSolutionInput" name="nonElectronicTechSolution" type="text">
+          </div>
+          
+          
+                </div>
+              
+              
+              
+              
+              
+              
+              <div class="nhsuk-radios__divider">or</div>
+              
+              
+              
+              
+              
+              
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="nationality-10" name="callRecall" type="checkbox" value="notApplicable">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="nationality-10">
+                  This does not apply to my practice
+                </label>
+              </div>
+              
+              
+              
+            </div>
+            </fieldset>
+          
+          
+          </div>
+          
+          
+          
+          
+                  <input type="submit" class="nhsuk-button" value="Continue">
+                  
+          
+                </form>
+          
+          
+          
+              </div>
+            </div>
+          
+                    </main>
+
+  </div>
+  </div>
+{% endblock %}
