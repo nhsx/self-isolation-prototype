@@ -31,4 +31,13 @@ router.post('/live-alone', function(req,res){
     }
 })
 
+router.post('/symptoms1', function(req,res){
+    var contacted = req.session.data['symptoms1']
+    if (contacted == "no-symptoms"){
+        res.redirect('which-conditions')
+    }
+    else {
+        res.redirect('symptoms-start')
+    }
+})
 module.exports = router;

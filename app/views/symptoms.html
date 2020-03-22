@@ -37,7 +37,7 @@
       <!-- Add your content here -->
       <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
       <div class="nhsuk-form-group">
-
+        <form action="/symptoms1" method="post">  
           <fieldset class="nhsuk-fieldset" aria-describedby="example-hint">
             <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
               <h1>
@@ -52,49 +52,49 @@
             <div class="nhsuk-checkboxes" data-module="checkboxes">
               
               <div class="nhsuk-checkboxes__item">
-                  <input class="nhsuk-checkboxes__input" id="high-temperature" name="example" type="checkbox" value="high-temperature">
+                  <input class="nhsuk-checkboxes__input" id="high-temperature" name="symptoms1" type="checkbox" value="high-temperature">
                   <label class="nhsuk-label nhsuk-checkboxes__label" for="high-temperature">
                       High temperature or fever (you feel hot to touch on your chest or back)
                   </label>
                 </div>
 
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="sore-throat" name="example" type="checkbox" value="sore-throat">
+                <input class="nhsuk-checkboxes__input" id="sore-throat" name="symptoms1" type="checkbox" value="sore-throat">
                 <label class="nhsuk-label nhsuk-checkboxes__label" for="sore-throat">
                   Sore throat
                 </label>
               </div>
         
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="continuous-cough" name="example" type="checkbox" value="continuous-cough">
+                <input class="nhsuk-checkboxes__input" id="continuous-cough" name="symptoms1" type="checkbox" value="continuous-cough">
                 <label class="nhsuk-label nhsuk-checkboxes__label" for="continuous-cough">
                     New continuous cough
                 </label>
               </div>
 
               <div class="nhsuk-checkboxes__item">
-                  <input class="nhsuk-checkboxes__input" id="shortness-breath" name="example" type="checkbox" value="shortness-breath">
+                  <input class="nhsuk-checkboxes__input" id="shortness-breath" name="symptoms1" type="checkbox" value="shortness-breath">
                   <label class="nhsuk-label nhsuk-checkboxes__label" for="shortness-breath">
                     Shortness of breath
                   </label>
                 </div>
 
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="muscle-joint" name="example" type="checkbox" value="muscle-joint">
+                <input class="nhsuk-checkboxes__input" id="muscle-joint" name="symptoms1" type="checkbox" value="muscle-joint">
                 <label class="nhsuk-label nhsuk-checkboxes__label" for="muscle-joint">
                     Muscle or joint pain
                 </label>
               </div>
 
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="loss-smell" name="example" type="checkbox" value="loss-smell">
+                <input class="nhsuk-checkboxes__input" id="loss-smell" name="symptoms1" type="checkbox" value="loss-smell">
                 <label class="nhsuk-label nhsuk-checkboxes__label" for="loss-smell">
                     Loss of smell or taste
                 </label>
               </div>
 
               <div class="nhsuk-checkboxes__item">
-                <input class="nhsuk-checkboxes__input" id="tired-exhaused" name="example" type="checkbox" value="tired-exhaused">
+                <input class="nhsuk-checkboxes__input" id="tired-exhaused" name="symptoms1" type="checkbox" value="tired-exhaused">
                 <label class="nhsuk-label nhsuk-checkboxes__label" for="tired-exhaused">
                     Feeling tired or exhausted
                 </label>
@@ -102,7 +102,7 @@
 
 
               <!--  <div class="nhsuk-checkboxes__item">
-                    <input class="nhsuk-checkboxes__input" id="example-3" name="example" type="checkbox" value="text message" data-aria-controls="health-condition">
+                    <input class="nhsuk-checkboxes__input" id="example-3" name="symptoms1" type="checkbox" value="text message" data-aria-controls="health-condition">
                     <label class="nhsuk-label nhsuk-checkboxes__label" for="example-3">
                         No - I have other symptoms
                     </label>
@@ -115,26 +115,19 @@
                       <input class="nhsuk-input nhsuk-u-width-one-third" id="contact-by-email" name="contact-by-email" type="number" spellcheck="false"></input>
                     </div>
                   </div> -->
-                  <div class="nhsuk-checkboxes__item">
-                      <input class="nhsuk-checkboxes__input" id="no-symptoms" name="example" type="checkbox" value="no-symptoms">
-                      <label class="nhsuk-label nhsuk-checkboxes__label" for="no-symptoms">
-                          No - I do not have any symptoms
-                      </label>
-                    </div>
-
-
-
-        
+              <div class="nhsuk-checkboxes__item">
+                <input class="nhsuk-checkboxes__input" id="no-symptoms" name="symptoms1" type="checkbox" value="no-symptoms">
+                <label class="nhsuk-label nhsuk-checkboxes__label" for="no-symptoms">
+                    No - I do not have any symptoms
+                </label>
+              </div>
             </div>
           </fieldset>
-        
         </div>
-     
       <br>
-      <form action="symptoms-start" method="post">
-          <button class="nhsuk-button" type="submit">
-              Continue
-          </button>
+      <button class="nhsuk-button" type="submit">
+          Continue
+      </button>
       </form>
       <!-- End of content -->
     </div>
