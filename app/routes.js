@@ -18,13 +18,13 @@ router.post('/updates-text', function(req,res){
 
 })
 
-router.post('/live-alone', function(req,res){
+router.post('/live-alone-v1', function(req,res){
     var contacted = req.session.data['living-alone']
     if (contacted == "yes"){
-        res.redirect('live-number')
+        res.redirect('/v1/live-number')
     }
     if (contacted == "no"){
-        res.redirect('updates-text')
+        res.redirect('/v1/updates-text')
     }
     else {
         res.redirect('#')
